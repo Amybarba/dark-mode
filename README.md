@@ -1,20 +1,20 @@
-# Module Project: Composing Stateful Logic - Dark Mode
+X # Module Project: Composing Stateful Logic - Dark Mode
 
 This project allows you to practice the concepts and techniques learned in this module and apply them in a concrete project. This module explored Form management in React. You learned what stateful logic is, how to build custom hooks, how to compose multiple hooks together, and how to use mocks and spies in testing. In your project you will demonstrate proficiency of these subjects and principles by creating an application using each of these.
 
-## Instructions
+X ## Instructions
 
-**Read these instructions carefully. Understand exactly what is expected _before_ starting this project.**
+X **Read these instructions carefully. Understand exactly what is expected _before_ starting this project.**
 
-### Commits
+X ### Commits
 
 Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons.
 
-### Description
+X ### Description
 
 In this project you'll take this crypto currency tracker app and build two custom hooks that, when composed together, will allow users to set and persist a dark mode preference.
 
-## Project Set Up
+X ## Project Set Up
 
 - [X] Create a forked copy of this project.
 - [X] Add your team lead as collaborator on Github.
@@ -22,7 +22,7 @@ In this project you'll take this crypto currency tracker app and build two custo
 - [X] CD into the project base directory `cd dark-mode`
 - [X] Download project dependencies by running one of these two commands `yarn` or `npm install`
 - [X] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
-- [X ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
 - [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [X] Push commits: git push origin `<firstName-lastName>`.
 
@@ -44,11 +44,11 @@ Follow these steps for completing your project.
 
 ## STEP 1 - useLocalStorage
 
-Open your app and take a look around. The crypto currency data is being fetched and displayed for you. In `styles.scss`, at the very bottom, you'll notice there are some styles for a class called `dark-mode`. Soon, we'll write a custom hook that sets this class on the body tag. That hook is going to compose a `useLocalStorage` inside it to accomplish that, so let's write the localStorage one first.
+Open your app and take a look around. X The crypto currency data is being fetched and displayed for you. X In `styles.scss`, at the very bottom, you'll notice there are some styles for a class called `dark-mode`. Soon, we'll write a custom hook that sets this class on the body tag. X That hook is going to compose a `useLocalStorage` inside it to accomplish that, so let's write the localStorage one first.
 
-This is going to be a pretty cool hook. It will be used pretty much the same way as `useState`, but with a key and value passed into it - ie `const [name, setName] = useLocalStorage('name', 'Dustin')`. You can use `setName` to update the value of `name` on localStorage! Pretty cool, huh? Let's get to it!
+X This is going to be a pretty cool hook. It will be used pretty much the same way as `useState`, but with a key and value passed into it - ie `const [name, setName] = useLocalStorage('name', 'Dustin')`. You can use `setName` to update the value of `name` on localStorage! Pretty cool, huh? Let's get to it!
 
-- Create a new directory called `hooks`, and a new file in it called `useLocalStorage`.
+X - Create a new directory called `hooks`, and a new file in it called `useLocalStorage`.
 - Build a function called `useLocalStorage`. Now, to set something to localStorage, we need a key (must be a string) and a value (can be anything). To retrieve something from localStorage, we need the key. To update something in localStorage, you use the same method as adding something new, and it will just replace the old key/value pair in localStorage. Knowing this, let's add `key` and `initialValue` as parameters to the hook.
 - We're going to set up some state here. Set up a state property called storedValue.
   - This state property is going to take a function as it's initial value. When we do this, whatever that callback function returns is what gets set as the intialValue for the state property.
